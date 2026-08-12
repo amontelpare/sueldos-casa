@@ -204,40 +204,6 @@
           "sipa": 13637.06
         }
       ]
-    },
-    {
-      "vigenciaDesde": "2026-01",
-      "etiqueta": "Enero 2026 (vence en febrero)",
-      "fuente": "ARCA — Casas particulares, aportes y contribuciones Enero 2026",
-      "tramos": [
-        {
-          "etiqueta": "Menos de 12 hs semanales",
-          "desdeHoras": 0,
-          "hastaHoras": 12,
-          "total": 8812.75,
-          "obraSocial": 1784.27,
-          "art": 624.67,
-          "sipa": 6403.81
-        },
-        {
-          "etiqueta": "De 12 a menos de 16 hs semanales",
-          "desdeHoras": 12,
-          "hastaHoras": 16,
-          "total": 13840.63,
-          "obraSocial": 3306.32,
-          "art": 1249.06,
-          "sipa": 9285.25
-        },
-        {
-          "etiqueta": "16 hs semanales o más",
-          "desdeHoras": 16,
-          "hastaHoras": null,
-          "total": 37271.19,
-          "obraSocial": 21990.11,
-          "art": 1821.88,
-          "sipa": 13459.2
-        }
-      ]
     }
   ]
 }

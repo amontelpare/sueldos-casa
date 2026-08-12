@@ -13,7 +13,22 @@ import { FERIADOS } from '../data/feriados'
 import { TABLAS_APORTES } from '../data/aportes'
 import type { Empleada, Liquidacion } from './types'
 
-const escalaJulio = ESCALAS[0]
+/**
+ * Estos tests verifican el MOTOR de cálculo, así que necesitan datos que no se
+ * muevan. Los datos oficiales los actualiza un robot todos los días: si acá
+ * usara "la escala más nueva", el día que ARCA publique agosto se rompería todo
+ * y el robot no podría publicar nunca más.
+ *
+ * Por eso congelo la ventana hasta julio 2026. Las escalas y los feriados
+ * viejos ya no cambian, así que sigo probando contra los datos reales sin que
+ * el tiempo los pise. Que los datos NUEVOS estén bien formados es harina de
+ * otro costal: eso lo cubre `src/data/datos.test.ts`.
+ */
+const ESCALAS_TEST = ESCALAS.filter((e) => e.vigenciaDesde <= '2026-07')
+const FERIADOS_TEST = FERIADOS.filter((f) => f.fecha < '2027-01-01')
+const APORTES_TEST = TABLAS_APORTES.filter((t) => t.vigenciaDesde <= '2026-07')
+
+const escalaJulio = ESCALAS_TEST.find((e) => e.vigenciaDesde === '2026-07')!
 
 function empleada(over: Partial<Empleada> = {}): Empleada {
   return {
@@ -39,7 +54,7 @@ function liquidacion(emp: Empleada, periodo: string, over: Partial<Liquidacion> 
     id: 'l1',
     empleadaId: emp.id,
     periodo,
-    dias: generarDiasPorDefecto(emp, periodo, FERIADOS),
+    dias: generarDiasPorDefecto(emp, periodo, FERIADOS_TEST),
     ajustes: [],
     sacManual: null,
     incluirSac: false,
@@ -54,19 +69,19 @@ function correr(emp: Empleada, liq: Liquidacion) {
   return calcularLiquidacion({
     empleada: emp,
     liquidacion: liq,
-    escalas: ESCALAS,
-    feriados: FERIADOS,
-    tablasAportes: TABLAS_APORTES,
+    escalas: ESCALAS_TEST,
+    feriados: FERIADOS_TEST,
+    tablasAportes: APORTES_TEST,
     config: CONFIG_POR_DEFECTO,
   })
 }
 
 describe('escalas oficiales', () => {
   it('toma la escala vigente para el período', () => {
-    expect(escalaParaPeriodo(ESCALAS, '2026-08').etiqueta).toBe('Julio 2026')
-    expect(escalaParaPeriodo(ESCALAS, '2026-07').etiqueta).toBe('Julio 2026')
-    expect(escalaParaPeriodo(ESCALAS, '2026-05').etiqueta).toBe('Mayo 2026')
-    expect(escalaParaPeriodo(ESCALAS, '2025-12').etiqueta).toBe('Enero 2026')
+    expect(escalaParaPeriodo(ESCALAS_TEST, '2026-08').etiqueta).toBe('Julio 2026')
+    expect(escalaParaPeriodo(ESCALAS_TEST, '2026-07').etiqueta).toBe('Julio 2026')
+    expect(escalaParaPeriodo(ESCALAS_TEST, '2026-05').etiqueta).toBe('Mayo 2026')
+    expect(escalaParaPeriodo(ESCALAS_TEST, '2025-12').etiqueta).toBe('Enero 2026')
   })
 
   it('mantiene los valores oficiales de julio 2026', () => {
@@ -78,8 +93,8 @@ describe('escalas oficiales', () => {
   })
 
   it('la zona desfavorable pasó de 30% a 31% en abril 2026', () => {
-    expect(escalaParaPeriodo(ESCALAS, '2026-03').zonaDesfavorablePct).toBe(30)
-    expect(escalaParaPeriodo(ESCALAS, '2026-04').zonaDesfavorablePct).toBe(31)
+    expect(escalaParaPeriodo(ESCALAS_TEST, '2026-03').zonaDesfavorablePct).toBe(30)
+    expect(escalaParaPeriodo(ESCALAS_TEST, '2026-04').zonaDesfavorablePct).toBe(31)
   })
 })
 
@@ -133,7 +148,7 @@ describe('valor base', () => {
 describe('armado del mes por defecto', () => {
   it('marca como trabajados los días de la jornada y libres el resto', () => {
     const emp = empleada()
-    const dias = generarDiasPorDefecto(emp, '2026-08', FERIADOS)
+    const dias = generarDiasPorDefecto(emp, '2026-08', FERIADOS_TEST)
     expect(dias).toHaveLength(31)
     // 2026-08-03 es lunes
     expect(dias.find((d) => d.fecha === '2026-08-03')!.estado).toBe('trabajado')
@@ -143,14 +158,14 @@ describe('armado del mes por defecto', () => {
 
   it('marca el feriado que cae en día habitual como pago sin trabajar', () => {
     const emp = empleada()
-    const dias = generarDiasPorDefecto(emp, '2026-08', FERIADOS)
+    const dias = generarDiasPorDefecto(emp, '2026-08', FERIADOS_TEST)
     // 17/08/2026 (San Martín) es lunes, día habitual
     expect(dias.find((d) => d.fecha === '2026-08-17')!.estado).toBe('feriado_pago')
   })
 
   it('el feriado que cae en día no habitual queda libre', () => {
     const emp = empleada({ jornada: [0, 0, 4, 0, 4, 0, 0] }) // martes y jueves
-    const dias = generarDiasPorDefecto(emp, '2026-08', FERIADOS)
+    const dias = generarDiasPorDefecto(emp, '2026-08', FERIADOS_TEST)
     expect(dias.find((d) => d.fecha === '2026-08-17')!.estado).toBe('libre')
   })
 })
@@ -362,9 +377,9 @@ describe('advertencias', () => {
     const r = calcularLiquidacion({
       empleada: emp,
       liquidacion: liq,
-      escalas: ESCALAS,
-      feriados: FERIADOS,
-      tablasAportes: TABLAS_APORTES,
+      escalas: ESCALAS_TEST,
+      feriados: FERIADOS_TEST,
+      tablasAportes: APORTES_TEST,
       config: CONFIG_POR_DEFECTO,
     })
     expect(r.advertencias.some((a) => a.includes('No hay feriados cargados para 2030'))).toBe(true)
