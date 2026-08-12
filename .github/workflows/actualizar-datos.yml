@@ -21,9 +21,9 @@ jobs:
     outputs:
       cambios: ${{ steps.revisar.outputs.cambios }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
 
@@ -48,7 +48,7 @@ jobs:
       # Antes de commitear, los datos nuevos tienen que pasar los tests.
       # Si ARCA cambia el formato del PDF y el parser saca cualquier cosa,
       # esto se pone en rojo y no se publica nada roto.
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         if: steps.revisar.outputs.cambios == 'si'
         with:
           node-version: 22
