@@ -1,0 +1,243 @@
+{
+  "actualizado": "2026-08-11",
+  "tablas": [
+    {
+      "vigenciaDesde": "2026-07",
+      "etiqueta": "Julio 2026 (vence en agosto)",
+      "fuente": "ARCA — Casas particulares, aportes y contribuciones Julio 2026",
+      "tramos": [
+        {
+          "etiqueta": "Menos de 12 hs semanales",
+          "desdeHoras": 0,
+          "hastaHoras": 12,
+          "total": 10088.64,
+          "obraSocial": 2084.85,
+          "art": 729.9,
+          "sipa": 7273.89
+        },
+        {
+          "etiqueta": "De 12 a menos de 16 hs semanales",
+          "desdeHoras": 12,
+          "hastaHoras": 16,
+          "total": 15857.96,
+          "obraSocial": 3863.3,
+          "art": 1459.48,
+          "sipa": 10535.18
+        },
+        {
+          "etiqueta": "16 hs semanales o más",
+          "desdeHoras": 16,
+          "hastaHoras": null,
+          "total": 43082.7,
+          "obraSocial": 25694.55,
+          "art": 2128.79,
+          "sipa": 15259.36
+        }
+      ]
+    },
+    {
+      "vigenciaDesde": "2026-06",
+      "etiqueta": "Junio 2026 (vence en julio)",
+      "fuente": "ARCA — Casas particulares, aportes y contribuciones Junio 2026",
+      "tramos": [
+        {
+          "etiqueta": "Menos de 12 hs semanales",
+          "desdeHoras": 0,
+          "hastaHoras": 12,
+          "total": 9567.83,
+          "obraSocial": 1784.27,
+          "art": 624.67,
+          "sipa": 7158.89
+        },
+        {
+          "etiqueta": "De 12 a menos de 16 hs semanales",
+          "desdeHoras": 12,
+          "hastaHoras": 16,
+          "total": 14975.56,
+          "obraSocial": 3306.32,
+          "art": 1249.06,
+          "sipa": 10420.18
+        },
+        {
+          "etiqueta": "16 hs semanales o más",
+          "desdeHoras": 16,
+          "hastaHoras": null,
+          "total": 38956.35,
+          "obraSocial": 21990.11,
+          "art": 1821.88,
+          "sipa": 15144.36
+        }
+      ]
+    },
+    {
+      "vigenciaDesde": "2026-05",
+      "etiqueta": "Mayo 2026 (vence en junio)",
+      "fuente": "ARCA — Casas particulares, aportes y contribuciones Mayo 2026",
+      "tramos": [
+        {
+          "etiqueta": "Menos de 12 hs semanales",
+          "desdeHoras": 0,
+          "hastaHoras": 12,
+          "total": 9374.12,
+          "obraSocial": 1784.27,
+          "art": 624.67,
+          "sipa": 6965.18
+        },
+        {
+          "etiqueta": "De 12 a menos de 16 hs semanales",
+          "desdeHoras": 12,
+          "hastaHoras": 16,
+          "total": 14665.62,
+          "obraSocial": 3306.32,
+          "art": 1249.06,
+          "sipa": 10110.24
+        },
+        {
+          "etiqueta": "16 hs semanales o más",
+          "desdeHoras": 16,
+          "hastaHoras": null,
+          "total": 38478.05,
+          "obraSocial": 21990.11,
+          "art": 1821.88,
+          "sipa": 14666.06
+        }
+      ]
+    },
+    {
+      "vigenciaDesde": "2026-04",
+      "etiqueta": "Abril 2026 (vence en mayo)",
+      "fuente": "ARCA — Casas particulares, aportes y contribuciones Abril 2026",
+      "tramos": [
+        {
+          "etiqueta": "Menos de 12 hs semanales",
+          "desdeHoras": 0,
+          "hastaHoras": 12,
+          "total": 9296.65,
+          "obraSocial": 1784.27,
+          "art": 624.67,
+          "sipa": 6887.71
+        },
+        {
+          "etiqueta": "De 12 a menos de 16 hs semanales",
+          "desdeHoras": 12,
+          "hastaHoras": 16,
+          "total": 14541.68,
+          "obraSocial": 3306.32,
+          "art": 1249.06,
+          "sipa": 9986.3
+        },
+        {
+          "etiqueta": "16 hs semanales o más",
+          "desdeHoras": 16,
+          "hastaHoras": null,
+          "total": 38286.78,
+          "obraSocial": 21990.11,
+          "art": 1821.88,
+          "sipa": 14474.79
+        }
+      ]
+    },
+    {
+      "vigenciaDesde": "2026-03",
+      "etiqueta": "Marzo 2026 (vence en abril)",
+      "fuente": "ARCA — Casas particulares, aportes y contribuciones Marzo 2026",
+      "tramos": [
+        {
+          "etiqueta": "Menos de 12 hs semanales",
+          "desdeHoras": 0,
+          "hastaHoras": 12,
+          "total": 9093.32,
+          "obraSocial": 1784.27,
+          "art": 624.67,
+          "sipa": 6684.38
+        },
+        {
+          "etiqueta": "De 12 a menos de 16 hs semanales",
+          "desdeHoras": 12,
+          "hastaHoras": 16,
+          "total": 14289.56,
+          "obraSocial": 3306.32,
+          "art": 1249.06,
+          "sipa": 9734.18
+        },
+        {
+          "etiqueta": "16 hs semanales o más",
+          "desdeHoras": 16,
+          "hastaHoras": null,
+          "total": 37963.97,
+          "obraSocial": 21990.11,
+          "art": 1821.88,
+          "sipa": 14151.98
+        }
+      ]
+    },
+    {
+      "vigenciaDesde": "2026-02",
+      "etiqueta": "Febrero 2026 (vence en marzo)",
+      "fuente": "ARCA — Casas particulares, aportes y contribuciones Febrero 2026",
+      "tramos": [
+        {
+          "etiqueta": "Menos de 12 hs semanales",
+          "desdeHoras": 0,
+          "hastaHoras": 12,
+          "total": 8884.78,
+          "obraSocial": 1784.27,
+          "art": 624.67,
+          "sipa": 6475.84
+        },
+        {
+          "etiqueta": "De 12 a menos de 16 hs semanales",
+          "desdeHoras": 12,
+          "hastaHoras": 16,
+          "total": 13955.89,
+          "obraSocial": 3306.32,
+          "art": 1249.06,
+          "sipa": 9400.51
+        },
+        {
+          "etiqueta": "16 hs semanales o más",
+          "desdeHoras": 16,
+          "hastaHoras": null,
+          "total": 37449.05,
+          "obraSocial": 21990.11,
+          "art": 1821.88,
+          "sipa": 13637.06
+        }
+      ]
+    },
+    {
+      "vigenciaDesde": "2026-01",
+      "etiqueta": "Enero 2026 (vence en febrero)",
+      "fuente": "ARCA — Casas particulares, aportes y contribuciones Enero 2026",
+      "tramos": [
+        {
+          "etiqueta": "Menos de 12 hs semanales",
+          "desdeHoras": 0,
+          "hastaHoras": 12,
+          "total": 8812.75,
+          "obraSocial": 1784.27,
+          "art": 624.67,
+          "sipa": 6403.81
+        },
+        {
+          "etiqueta": "De 12 a menos de 16 hs semanales",
+          "desdeHoras": 12,
+          "hastaHoras": 16,
+          "total": 13840.63,
+          "obraSocial": 3306.32,
+          "art": 1249.06,
+          "sipa": 9285.25
+        },
+        {
+          "etiqueta": "16 hs semanales o más",
+          "desdeHoras": 16,
+          "hastaHoras": null,
+          "total": 37271.19,
+          "obraSocial": 21990.11,
+          "art": 1821.88,
+          "sipa": 13459.2
+        }
+      ]
+    }
+  ]
+}

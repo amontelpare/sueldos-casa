@@ -1,0 +1,79 @@
+name: Actualizar datos oficiales
+
+on:
+  schedule:
+    # Todos los días a las 11:00 UTC (8 de la mañana en Argentina).
+    # Las resoluciones de la CNTCP suelen salir a principio de mes, pero mirar
+    # todos los días sale gratis y evita quedarse con una escala vieja.
+    - cron: '0 11 * * *'
+  workflow_dispatch:
+    inputs:
+      forzar:
+        description: 'Re-bajar todo, incluso lo que ya está cargado'
+        type: boolean
+        default: false
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      cambios: ${{ steps.revisar.outputs.cambios }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - run: pip install --quiet pypdf
+
+      - name: Buscar novedades en ARCA y en el calendario de feriados
+        run: |
+          python3 scripts/actualizar-datos.py \
+            ${{ inputs.forzar && '--forzar' || '' }}
+
+      - name: ¿Cambió algo?
+        id: revisar
+        run: |
+          if [ -z "$(git status --porcelain src/data)" ]; then
+            echo "cambios=no" >> "$GITHUB_OUTPUT"
+            echo "Sin novedades."
+          else
+            echo "cambios=si" >> "$GITHUB_OUTPUT"
+            git --no-pager diff --stat src/data
+          fi
+
+      # Antes de commitear, los datos nuevos tienen que pasar los tests.
+      # Si ARCA cambia el formato del PDF y el parser saca cualquier cosa,
+      # esto se pone en rojo y no se publica nada roto.
+      - uses: actions/setup-node@v4
+        if: steps.revisar.outputs.cambios == 'si'
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Validar los datos nuevos
+        if: steps.revisar.outputs.cambios == 'si'
+        run: |
+          npm ci
+          npm test
+
+      - name: Commitear
+        if: steps.revisar.outputs.cambios == 'si'
+        run: |
+          git config user.name  'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add src/data
+          git commit -m 'Actualizar datos oficiales (ARCA y feriados)'
+          git push
+
+  publicar:
+    needs: actualizar
+    if: needs.actualizar.outputs.cambios == 'si'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/deploy.yml

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#14958a"/>
+      <stop offset="1" stop-color="#0e6a63"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#g)"/>
+  <!-- techo -->
+  <path d="M256 92 106 208v20h300v-20L256 92z" fill="#ffffff" opacity="0.95"/>
+  <!-- cuerpo de la casa -->
+  <rect x="136" y="240" width="240" height="184" rx="26" fill="#ffffff" opacity="0.95"/>
+  <!-- signo peso -->
+  <g fill="#0e6a63">
+    <rect x="243" y="262" width="26" height="140" rx="10"/>
+    <path d="M256 286c-34 0-58 15-58 40 0 24 20 34 52 40 24 5 32 9 32 19 0 11-13 18-30 18-16 0-28-5-36-13l-22 24c14 14 34 22 58 22 36 0 60-17 60-42 0-26-21-36-54-43-23-5-30-9-30-18 0-10 11-16 28-16 15 0 26 4 34 11l21-24c-13-11-31-18-55-18z"/>
+  </g>
+</svg>

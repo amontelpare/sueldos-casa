@@ -1,0 +1,271 @@
+{
+  "actualizado": "2026-08-11",
+  "escalas": [
+    {
+      "vigenciaDesde": "2026-07",
+      "etiqueta": "Julio 2026",
+      "zonaDesfavorablePct": 31,
+      "fuente": "ARCA — Casas particulares, remuneraciones Julio 2026",
+      "valores": {
+        "supervisor": {
+          "horaConRetiro": 4438.77,
+          "horaSinRetiro": 4829.13,
+          "mesConRetiro": 553725.91,
+          "mesSinRetiro": 612673.11
+        },
+        "especificas": {
+          "horaConRetiro": 4223.25,
+          "horaSinRetiro": 4597.18,
+          "mesConRetiro": 517006.43,
+          "mesSinRetiro": 571426.17
+        },
+        "caseros": {
+          "horaConRetiro": null,
+          "horaSinRetiro": 3996.45,
+          "mesConRetiro": null,
+          "mesSinRetiro": 505302.76
+        },
+        "cuidado": {
+          "horaConRetiro": 3996.45,
+          "horaSinRetiro": 4435.86,
+          "mesConRetiro": 505302.76,
+          "mesSinRetiro": 558972.92
+        },
+        "generales": {
+          "horaConRetiro": 3733.72,
+          "horaSinRetiro": 3996.45,
+          "mesConRetiro": 458053.22,
+          "mesSinRetiro": 505302.76
+        }
+      }
+    },
+    {
+      "vigenciaDesde": "2026-06",
+      "etiqueta": "Junio 2026",
+      "zonaDesfavorablePct": 31,
+      "fuente": "ARCA — Casas particulares, remuneraciones Junio 2026",
+      "valores": {
+        "supervisor": {
+          "horaConRetiro": 4297.33,
+          "horaSinRetiro": 4683.64,
+          "mesConRetiro": 536080.78,
+          "mesSinRetiro": 594214.11
+        },
+        "especificas": {
+          "horaConRetiro": 4083.26,
+          "horaSinRetiro": 4453.26,
+          "mesConRetiro": 499868.28,
+          "mesSinRetiro": 553536.65
+        },
+        "caseros": {
+          "horaConRetiro": null,
+          "horaSinRetiro": 3862.18,
+          "mesConRetiro": null,
+          "mesSinRetiro": 488326.19
+        },
+        "cuidado": {
+          "horaConRetiro": 3862.18,
+          "horaSinRetiro": 4295.26,
+          "mesConRetiro": 488326.19,
+          "mesSinRetiro": 541255.35
+        },
+        "generales": {
+          "horaConRetiro": 3600.66,
+          "horaSinRetiro": 3862.18,
+          "mesConRetiro": 441729.02,
+          "mesSinRetiro": 488326.19
+        }
+      }
+    },
+    {
+      "vigenciaDesde": "2026-05",
+      "etiqueta": "Mayo 2026",
+      "zonaDesfavorablePct": 31,
+      "fuente": "ARCA — Casas particulares, remuneraciones Mayo 2026",
+      "valores": {
+        "supervisor": {
+          "horaConRetiro": 4233.82,
+          "horaSinRetiro": 4614.42,
+          "mesConRetiro": 528158.4,
+          "mesSinRetiro": 585432.62
+        },
+        "especificas": {
+          "horaConRetiro": 4022.91,
+          "horaSinRetiro": 4387.44,
+          "mesConRetiro": 492481.06,
+          "mesSinRetiro": 545356.31
+        },
+        "caseros": {
+          "horaConRetiro": null,
+          "horaSinRetiro": 3805.1,
+          "mesConRetiro": null,
+          "mesSinRetiro": 481109.55
+        },
+        "cuidado": {
+          "horaConRetiro": 3805.1,
+          "horaSinRetiro": 4231.79,
+          "mesConRetiro": 481109.55,
+          "mesSinRetiro": 533256.5
+        },
+        "generales": {
+          "horaConRetiro": 3547.45,
+          "horaSinRetiro": 3805.1,
+          "mesConRetiro": 435201.0,
+          "mesSinRetiro": 481109.55
+        }
+      }
+    },
+    {
+      "vigenciaDesde": "2026-04",
+      "etiqueta": "Abril 2026",
+      "zonaDesfavorablePct": 31,
+      "fuente": "ARCA — Casas particulares, remuneraciones Abril 2026",
+      "valores": {
+        "supervisor": {
+          "horaConRetiro": 4167.14,
+          "horaSinRetiro": 4541.75,
+          "mesConRetiro": 519840.95,
+          "mesSinRetiro": 576213.21
+        },
+        "especificas": {
+          "horaConRetiro": 3959.56,
+          "horaSinRetiro": 4318.35,
+          "mesConRetiro": 484725.45,
+          "mesSinRetiro": 536768.02
+        },
+        "caseros": {
+          "horaConRetiro": null,
+          "horaSinRetiro": 3745.18,
+          "mesConRetiro": null,
+          "mesSinRetiro": 473533.02
+        },
+        "cuidado": {
+          "horaConRetiro": 3745.18,
+          "horaSinRetiro": 4165.14,
+          "mesConRetiro": 473533.02,
+          "mesSinRetiro": 524858.76
+        },
+        "generales": {
+          "horaConRetiro": 3491.58,
+          "horaSinRetiro": 3745.18,
+          "mesConRetiro": 428347.44,
+          "mesSinRetiro": 473533.02
+        }
+      }
+    },
+    {
+      "vigenciaDesde": "2026-03",
+      "etiqueta": "Marzo 2026",
+      "zonaDesfavorablePct": 30,
+      "fuente": "ARCA — Casas particulares, remuneraciones Marzo 2026",
+      "valores": {
+        "supervisor": {
+          "horaConRetiro": 4013.3,
+          "horaSinRetiro": 4382.63,
+          "mesConRetiro": 500649.26,
+          "mesSinRetiro": 556024.77
+        },
+        "especificas": {
+          "horaConRetiro": 3807.86,
+          "horaSinRetiro": 4161.54,
+          "mesConRetiro": 466154.67,
+          "mesSinRetiro": 517277.03
+        },
+        "caseros": {
+          "horaConRetiro": null,
+          "horaSinRetiro": 3599.87,
+          "mesConRetiro": null,
+          "mesSinRetiro": 455160.14
+        },
+        "cuidado": {
+          "horaConRetiro": 3599.87,
+          "horaSinRetiro": 4012.14,
+          "mesConRetiro": 455160.14,
+          "mesSinRetiro": 505578.35
+        },
+        "generales": {
+          "horaConRetiro": 3348.33,
+          "horaSinRetiro": 3599.87,
+          "mesConRetiro": 410773.52,
+          "mesSinRetiro": 455160.14
+        }
+      }
+    },
+    {
+      "vigenciaDesde": "2026-02",
+      "etiqueta": "Febrero 2026",
+      "zonaDesfavorablePct": 30,
+      "fuente": "ARCA — Casas particulares, remuneraciones Febrero 2026",
+      "valores": {
+        "supervisor": {
+          "horaConRetiro": 3953.99,
+          "horaSinRetiro": 4317.86,
+          "mesConRetiro": 493250.5,
+          "mesSinRetiro": 547807.65
+        },
+        "especificas": {
+          "horaConRetiro": 3751.59,
+          "horaSinRetiro": 4100.04,
+          "mesConRetiro": 459265.68,
+          "mesSinRetiro": 509632.54
+        },
+        "caseros": {
+          "horaConRetiro": null,
+          "horaSinRetiro": 3546.67,
+          "mesConRetiro": null,
+          "mesSinRetiro": 448433.64
+        },
+        "cuidado": {
+          "horaConRetiro": 3546.67,
+          "horaSinRetiro": 3952.85,
+          "mesConRetiro": 448433.64,
+          "mesSinRetiro": 498106.75
+        },
+        "generales": {
+          "horaConRetiro": 3298.85,
+          "horaSinRetiro": 3546.67,
+          "mesConRetiro": 404702.98,
+          "mesSinRetiro": 448433.64
+        }
+      }
+    },
+    {
+      "vigenciaDesde": "2026-01",
+      "etiqueta": "Enero 2026",
+      "zonaDesfavorablePct": 30,
+      "fuente": "ARCA — Casas particulares, remuneraciones Enero 2026",
+      "valores": {
+        "supervisor": {
+          "horaConRetiro": 3895.56,
+          "horaSinRetiro": 4254.05,
+          "mesConRetiro": 485961.09,
+          "mesSinRetiro": 539711.97
+        },
+        "especificas": {
+          "horaConRetiro": 3696.15,
+          "horaSinRetiro": 4039.45,
+          "mesConRetiro": 452478.51,
+          "mesSinRetiro": 502101.03
+        },
+        "caseros": {
+          "horaConRetiro": null,
+          "horaSinRetiro": 3494.25,
+          "mesConRetiro": null,
+          "mesSinRetiro": 441806.54
+        },
+        "cuidado": {
+          "horaConRetiro": 3494.25,
+          "horaSinRetiro": 3894.43,
+          "mesConRetiro": 441806.54,
+          "mesSinRetiro": 490745.56
+        },
+        "generales": {
+          "horaConRetiro": 3250.1,
+          "horaSinRetiro": 3494.25,
+          "mesConRetiro": 398722.14,
+          "mesSinRetiro": 441806.54
+        }
+      }
+    }
+  ]
+}
