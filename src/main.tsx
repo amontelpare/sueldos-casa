@@ -12,8 +12,27 @@ createRoot(document.getElementById('root')!).render(
 // Sólo en el build: en desarrollo molestaría con el cache.
 if (import.meta.env.PROD && 'serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register(`${import.meta.env.BASE_URL}sw.js`).catch(() => {
-      // Sin service worker la app anda igual, sólo que necesita internet para abrir.
+    const base = import.meta.env.BASE_URL
+    const sw = `${base}sw.js`
+
+    // jobinnovation.com.ar sirve la app en /sueldos-casa, SIN barra final. El
+    // scope que sale por defecto es /sueldos-casa/, que no cubre esa misma URL
+    // y dejaría la página sin service worker (o sea, sin modo offline). Por eso
+    // pido el scope sin la barra, que el hosting habilita con el header
+    // Service-Worker-Allowed. Donde el base es relativo (GitHub Pages) el
+    // default ya está bien.
+    const scope = base.startsWith('/') && base.length > 1 ? base.replace(/\/$/, '') : null
+
+    const registrar = (opciones?: RegistrationOptions) =>
+      navigator.serviceWorker.register(sw, opciones)
+
+    const intento = scope ? registrar({ scope }) : registrar()
+
+    intento.catch(() => {
+      // Si el hosting no manda el header, el scope ancho se rechaza: vuelvo al
+      // default. Y si tampoco anda, la app funciona igual, sólo que necesita
+      // internet para abrir.
+      if (scope) registrar().catch(() => {})
     })
   })
 }
