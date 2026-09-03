@@ -1,6 +1,44 @@
 {
-  "actualizado": "2026-08-11",
+  "actualizado": "2026-09-03",
   "escalas": [
+    {
+      "vigenciaDesde": "2026-08",
+      "etiqueta": "Agosto 2026",
+      "zonaDesfavorablePct": 31,
+      "fuente": "ARCA — Casas particulares, remuneraciones Agosto 2026",
+      "valores": {
+        "supervisor": {
+          "horaConRetiro": 4523.11,
+          "horaSinRetiro": 4920.89,
+          "mesConRetiro": 564246.7,
+          "mesSinRetiro": 624313.9
+        },
+        "especificas": {
+          "horaConRetiro": 4303.5,
+          "horaSinRetiro": 4684.53,
+          "mesConRetiro": 526829.56,
+          "mesSinRetiro": 582283.26
+        },
+        "caseros": {
+          "horaConRetiro": null,
+          "horaSinRetiro": 4072.38,
+          "mesConRetiro": null,
+          "mesSinRetiro": 514903.51
+        },
+        "cuidado": {
+          "horaConRetiro": 4072.38,
+          "horaSinRetiro": 4520.15,
+          "mesConRetiro": 514903.51,
+          "mesSinRetiro": 569593.41
+        },
+        "generales": {
+          "horaConRetiro": 3804.66,
+          "horaSinRetiro": 4072.38,
+          "mesConRetiro": 466756.24,
+          "mesSinRetiro": 514903.51
+        }
+      }
+    },
     {
       "vigenciaDesde": "2026-07",
       "etiqueta": "Julio 2026",
