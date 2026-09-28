@@ -1,6 +1,40 @@
 {
-  "actualizado": "2026-09-05",
+  "actualizado": "2026-09-28",
   "tablas": [
+    {
+      "vigenciaDesde": "2026-09",
+      "etiqueta": "Septiembre 2026 (vence en octubre)",
+      "fuente": "ARCA — Casas particulares, aportes y contribuciones Septiembre 2026",
+      "tramos": [
+        {
+          "etiqueta": "Menos de 12 hs semanales",
+          "desdeHoras": 0,
+          "hastaHoras": 12,
+          "total": 10569.57,
+          "obraSocial": 2084.85,
+          "art": 729.9,
+          "sipa": 7754.82
+        },
+        {
+          "etiqueta": "De 12 a menos de 16 hs semanales",
+          "desdeHoras": 12,
+          "hastaHoras": 16,
+          "total": 16627.46,
+          "obraSocial": 3863.3,
+          "art": 1459.48,
+          "sipa": 11304.68
+        },
+        {
+          "etiqueta": "16 hs semanales o más",
+          "desdeHoras": 16,
+          "hastaHoras": null,
+          "total": 44270.19,
+          "obraSocial": 25694.55,
+          "art": 2128.79,
+          "sipa": 16446.85
+        }
+      ]
+    },
     {
       "vigenciaDesde": "2026-08",
       "etiqueta": "Agosto 2026 (vence en septiembre)",
