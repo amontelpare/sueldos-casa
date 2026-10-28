@@ -1,6 +1,74 @@
 {
-  "actualizado": "2026-09-28",
+  "actualizado": "2026-10-28",
   "tablas": [
+    {
+      "vigenciaDesde": "2026-11",
+      "etiqueta": "Noviembre 2026 (vence en diciembre)",
+      "fuente": "ARCA — Casas particulares, aportes y contribuciones Noviembre 2026",
+      "tramos": [
+        {
+          "etiqueta": "Menos de 12 hs semanales",
+          "desdeHoras": 0,
+          "hastaHoras": 12,
+          "total": 10953.66,
+          "obraSocial": 2084.85,
+          "art": 729.9,
+          "sipa": 8138.91
+        },
+        {
+          "etiqueta": "De 12 a menos de 16 hs semanales",
+          "desdeHoras": 12,
+          "hastaHoras": 16,
+          "total": 17162.8,
+          "obraSocial": 3863.3,
+          "art": 1459.48,
+          "sipa": 11840.02
+        },
+        {
+          "etiqueta": "16 hs semanales o más",
+          "desdeHoras": 16,
+          "hastaHoras": null,
+          "total": 45024.63,
+          "obraSocial": 25694.55,
+          "art": 2128.79,
+          "sipa": 17201.29
+        }
+      ]
+    },
+    {
+      "vigenciaDesde": "2026-10",
+      "etiqueta": "Octubre 2026 (vence en noviembre)",
+      "fuente": "ARCA — Casas particulares, aportes y contribuciones Octubre 2026",
+      "tramos": [
+        {
+          "etiqueta": "Menos de 12 hs semanales",
+          "desdeHoras": 0,
+          "hastaHoras": 12,
+          "total": 10856.52,
+          "obraSocial": 2084.85,
+          "art": 729.9,
+          "sipa": 8041.77
+        },
+        {
+          "etiqueta": "De 12 a menos de 16 hs semanales",
+          "desdeHoras": 12,
+          "hastaHoras": 16,
+          "total": 17007.37,
+          "obraSocial": 3863.3,
+          "art": 1459.48,
+          "sipa": 11684.59
+        },
+        {
+          "etiqueta": "16 hs semanales o más",
+          "desdeHoras": 16,
+          "hastaHoras": null,
+          "total": 44784.77,
+          "obraSocial": 25694.55,
+          "art": 2128.79,
+          "sipa": 16961.43
+        }
+      ]
+    },
     {
       "vigenciaDesde": "2026-09",
       "etiqueta": "Septiembre 2026 (vence en octubre)",
